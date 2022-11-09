@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //   arrays in ES6 methods 
+    // .foreach
+    var shoes=["adidas","nike","newbalance","puma"]
+    shoes.forEach((shoesname,index)=>{
+        document.write(shoesname+index+"<br>")
+        
+    })
+    shoes.forEach((shoesname,index)=>{
+        document.write(shoesname+"<br>")
+        
+    })
+    // .map
+    shoes.map((shoesname,index,arr)=>{
+        console.log(shoesname)
+    })
+    // .find 
+    var colours=["red","pink","green","orange","wht","grey"]
+    var rainbow=colours.find((visuals)=>{
+        return visuals.length==3
+    })
+    console.log(rainbow)
+    // .filter
+    var colours=["red","pink","green","orange","wht","grey"]
+    var rainbow=colours.filter((visuals)=>{
+        return visuals.length==4
+    })
+    console.log(rainbow)
+    </script>
+</body>
+</html>

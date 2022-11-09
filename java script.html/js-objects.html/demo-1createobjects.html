@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>create objects</title>
+</head>
+<body>
+    <script>
+        /* var, let ,const shortcuts in variables
+        */
+        let person={
+            fname:"sai",
+            email:"saireddy@gmail.com",
+            mobile:7434899849
+            
+            
+        }
+        
+        var item={
+            itemname:'pizza',
+            cost:330,
+            itemtype:"chickenpizza"
+        }
+        const dof={
+            date:"31st",
+            month:"july",
+            year:2000
+        }
+        var fname={
+            fname:"sai",
+            lName:'reddy'
+        }
+        let vehicle={
+            vehicle1:"toyota innova crysta",
+            vehicle2:"mahindra marazzo",
+            vehicle3:'lexus lx'
+        }
+        const price={
+            vehicle1:"18.09-23.83lakh",
+            vehicle2:"13.41-15.70 lakh",
+            vehicle3:'lexus lx'
+        }
+        var seatercars={
+            eightseatcars:'toyotainnovacrysta ,mahindramarazzo,lexus lx'
+  
+        }
+        let freeservices={
+            vehicle1:3,
+            vehicle2:4,
+            vehicle3:5
+        }
+        var cashback={
+            vehicle1:5000,
+            vehicle2:3000,
+            vehicle3:10000
+        }
+        const sportscars={
+            Name:'landrovercompany',
+            Name:"jeep",
+            Name:'lamborghini',
+            name:'ferrari'
+
+        }
+        // adding a property with . notation//
+        sportscars.city="guntur";
+        /*adding with [] notation
+        */
+       cashback['vehicle2']="3000-onlysbicards"
+
+        console.log(person, item,dof,fname ,vehicle, price, seatercars ,freeservices ,cashback ,sportscars);
+        for(a in sportscars){
+            document.write(a+":"+sportscars[a]+"<br>")
+        }
+        document.write(fname.fname+"<br>"+fname.lName)
+        document.write("<br>fname:"+fname.fname+"<br>lname:"+fname.lName )
+        /*arrow functions or fat arrow functions
+         
+        var sayhello=()=>{
+            console.log("hello version ES6");
+        }
+        sayhello();
+                 
+         var x = myFunction(3, 3);
+           document.write("myFunction") 
+
+           function myFunction(a, b) {
+             return a * b;
+           }
+           */
+        //   document.write(chashback.vehicle1+"<br>"+cashback.vechicle2)
+        //   document.write("vechicle1:"+chashback.vechicle1)
+        document.write("<br>"+dof.date+"<br>"+dof.month)
+        document.write("<br>"+"date:"+dof.date+"<br>month:"+dof.month)
+        for(b in item){
+            document.write("<br>"+b+":"+item[b]+"<br>")
+                console.log(b)
+        }
+
+
+      
+    </script>
+    
+</body>
+</html>

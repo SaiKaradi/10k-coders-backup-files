@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // ARRAYS METHODS
+        //   .Push
+        //   push method will add a value to end of the Array
+        var names = ["sai", "srikanth", "srinu", "gopi"];
+
+        names.push("bhaskar")
+        for (i=0;i<names.length;i++) {
+
+            document.write(names[i]+"<br>")
+        }
+        
+
+
+        // .unshift
+        // unshift method will add a value to start of the Array
+        names.unshift("surya")
+        for(i=0;i<names.length;i++){
+            document.write(names[i]+"<br>")
+        }
+
+
+        // add some name replace that name changes
+
+        names[2]="venky"
+        for (i=0;i<names.length;i++) {
+
+         document.write(names[i]+"<br>")
+}
+
+// .splice use particular place replace 
+        names.splice(5,1,"koushik")
+        for (i=0;i<names.length;i++) {
+
+       document.write(names[i]+"<br>")
+    }
+
+    // .pop will remove last value
+    var cars=["bmw","volvo","landrover"]
+    cars.pop()
+    for(i=0;i<cars.length;i++){
+        document.write(cars[i]+"<br>")
+    }
+    // .shift will remove first value
+    var telvesions=["l.g","sony","mi"]
+    telvesions.shift()
+    telvesions.unshift("samsumg")
+    for(i=0;i<telvesions.length;i++){
+        document.write(telvesions[i]+"<br>")
+    }
+    // .sort will order in alphabet order array
+    var menswear=["pants","jeans","shorts","formalshirts","casualshoes"]
+    menswear.sort()
+    for(i=0;i<menswear.length;i++){
+        document.write(menswear[i]+"<br>")
+    }
+
+    menswear.reverse()
+    for(i=0;i<menswear.length;i++){
+        document.write(menswear[i]+"<br>")
+    }
+
+
+
+        
+
+
+    </script>
+</body>
+
+</html>

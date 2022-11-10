@@ -77,6 +77,7 @@
                 strikerate: 100
             },
         ]
+        
         // total score
         var totalscore = teamindia.reduce((initialvalue, player) => {
             if (initialvalue.runs) {
@@ -86,8 +87,10 @@
             }
 
         })
-        console.log(totalscore)
+        console.log("totalscore : "+totalscore)
         document.write("total score:"+totalscore+"<br>")
+
+
         // total 4s
         var totalfours = teamindia.reduce((initialvalue, player) => {
             if (initialvalue.fours) {
@@ -98,7 +101,9 @@
 
         })
         document.write("total 4s:"+totalfours+"<br>")
-        console.log(totalfours)
+        console.log("totalfours : "+totalfours)
+
+
         // total sixers
         var totalsixers = teamindia.reduce((initialvalue, player) => {
             if (initialvalue.sixers) {
@@ -107,7 +112,7 @@
                 return initialvalue + player.sixers
             }
         })
-        console.log(totalsixers)
+        console.log("totalsixers : "+totalsixers)
         document.write("total sixers:"+totalsixers+"<br>")
         // lowest runs players
         // var lruns=[4,4,82,15,2,40,1,1]
@@ -119,6 +124,8 @@
         //     return player.runs<8;
         // })
         // console.log(lessthan8)
+
+
         // lowest runs players
         var lowestruns = teamindia[0].runs;
         teamindia.forEach((playerRuns, index, teamindia) => {
@@ -128,8 +135,10 @@
                 }
             }
         })
-        console.log(lowestruns)
+        console.log("lowestruns : "+lowestruns)
         document.write("lowestruns:"+lowestruns+"<br>")
+
+
         // highest runs
         var highestruns = teamindia[0].runs;
         teamindia.forEach((playerRuns, index, teamindia) => {
@@ -139,8 +148,10 @@
                 }
             }
         })
-        console.log(highestruns)
+        console.log("highestruns : "+highestruns)
         document.write("highestruns:"+highestruns+"<br>")
+
+
         // loweststrikerate
         var loweststrikerate = teamindia[0].strikerate;
         teamindia.forEach((playerstrikerate, index, teamindia) => {
@@ -150,8 +161,9 @@
                 }
             }
         })
-        console.log(loweststrikerate)
+        console.log("loweststrikerate : "+loweststrikerate)
         document.write("loweststrikerate:"+loweststrikerate+"<br>")
+
         
         // highest strike rate
         var higheststrikerate = teamindia[0].strikerate;
@@ -162,7 +174,7 @@
                 }
             }
         })
-        console.log(higheststrikerate)
+        console.log("higheststrikerate : "+higheststrikerate)
         document.write("higheststrikerate:"+higheststrikerate+"<br>")
 
     </script>

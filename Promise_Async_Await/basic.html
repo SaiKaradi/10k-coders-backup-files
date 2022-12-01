@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 1.Promise
+      def : JavaScript Promise object contains both the producing code and calls to the consuming code.
+      output:the producing code obtains the result, it should call one of the two callbacks
+      result        call
+      Success	myResolve(result value)
+      error	     myReject(error object)
+    2.Asynchronous is a non-blocking architecture, so the execution of one task isn't dependent on another. Tasks can run simultaneously.
+    3. Synchronous is a blocking architecture, so the execution of each operation is dependent on the completion of the one before it.  -->
+    <script>
+        var users = []
+        function getALLusersFromServer(){
+           var getData = new XMLHttpRequest()
+           getData.onreadystatechange=function (){
+            if(getData.readyState == 4 && getData.status == 200){
+                users = JSON.parse(getData.response)
+                console.log("Users Inside getALLusersFromServer :",users)
+                displayAllUsers()
+            }
+           }
+           getData.open("GET","https://filltext.com/?rows=10&fname={firstName}&lname={lastName}&tel={phone|format}&address={streetAddress}&city={city}&state={usState|abbr}&zip={zip}&pretty=true")
+           getData.send()
+        }
+
+        function displayAllUsers(){
+            console.log("Users Inside displayAllUsers :",users)
+        }
+
+        getALLusersFromServer();
+    </script> 
+</body>
+</html>

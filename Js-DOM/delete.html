@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var deleteTd = document.createElement("td");
+var deleteBtn = document.createElement("button");
+deleteBtn.setAttribute("onclick", "deleteUser(" + i + ")");
+deleteBtn.innerHTML = "DELETE";
+deleteTd.appendChild(deleteBtn);
+myTr.appendChild(deleteTd);
+
+document.querySelector("tbody").appendChild(myTr);
+});
+}
+function deleteUser(i) {
+if (fillteredUsers.length == 0) {
+fillteredUsers = users.filter((user, index) => {
+  return user.id !== users[i].id;
+});
+} else {
+fillteredUsers = fillteredUsers.filter((user, index) => {
+  return user.id !== fillteredUsers[i].id;
+});
+</script>
+    
+</body>
+</html>
+var deleteTd = document.createElement("td");
+var deleteBtn = document.createElement("button");
+deleteBtn.setAttribute("onclick", "deleteUser(" + i + ")");
+deleteBtn.innerHTML = "DELETE";
+deleteTd.appendChild(deleteBtn);
+myTr.appendChild(deleteTd);
+
+document.querySelector("tbody").appendChild(myTr);
+});
+}
+function deleteUser(i) {
+if (fillteredUsers.length == 0) {
+fillteredUsers = users.filter((user, index) => {
+  return user.id !== users[i].id;
+});
+} else {
+fillteredUsers = fillteredUsers.filter((user, index) => {
+  return user.id !== fillteredUsers[i].id;
+});
+}
+
+displayUsers(fillteredUsers);
+}

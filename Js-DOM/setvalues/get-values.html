@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="fname">first name:</label>
+        <input type="text" name="" id="fname"><br>
+        <!-- <button onclick="getvalues()" type="button">getvalues</button> -->
+        <button onclick="setvalues()" type="button">setvalues</button>
+    </form>
+    <script>
+        function getvalues(){
+            var fname=document.getElementById("fname").value
+            console.log(fname)
+        }
+        function setvalues(){
+            var fname= "saireddy";
+            document.getElementById("fname").value=fname
+            console.log(fname)
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task1</title>
+</head>
+<style>
+    table,
+    th,
+    td {
+        border: 2px solid black;
+        border-radius: inherit;
+        border-bottom-left-radius: inherit;
+        border-collapse: collapse;
+        width: max-content;
+        height: 50px;
+    }
+</style>
+
+<body>
+
+    <table>
+        <thead>
+            <tr>
+                <th>fname</th>
+                <th>lname</th>
+                <th>delete</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <script>
+        var names = [
+            {
+                "fname": "fname",
+                "lname": 0
+            },
+            {
+                "fname": "fname",
+
+                "lname": 0
+            },
+            {
+                "fname": "fname",
+                "lname": 0
+            },
+            {
+                "fname": "fname",
+                "lname": 0
+            },
+            {
+                "fname": "fname",
+                "lname": 0
+            },
+            {
+                "fname": "fname",
+                "lname": 0
+            },
+            {
+                "fname": "fname",
+                "lname": 0
+            },
+            {
+                "fname": "fname",
+                "lname": 0
+            },
+            {
+                "fname": "fname",
+                "lname": 0
+            },
+            {
+                "fname": "fname",
+                "lname": 0
+            }
+        ]
+
+
+        // names.forEach((name)=>{
+        //     var mytr=document.createElement("tr")
+        //     var td1=document.createElement("td");
+        //     td1.innerHTML=name.fname
+        //     mytr.appendChild(td1)
+
+        //     var td2=document.createElement("td");
+        //     td2.innerHTML=name.lname
+        //     mytr.appendChild(td2)
+
+        // //    console.log(names)
+        //     document.querySelector("tbody").appendChild(myTr)
+        // })
+
+        names.forEach((user) => {
+            var name = document.createElement("tr")
+
+            for (a in user) {
+                var myTdata = document.createElement("td")
+                myTdata.innerHTML = user[a]
+                name.appendChild(myTdata)
+           
+     
+            }
+          
+            // document.querySelector("tbody").appendChild(name)
+        //     var name = document.createElement("tr")
+        // var deleteTd = document.createElement("td");
+        // var deleteBtn = document.createElement("button");
+        // deleteBtn.setAttribute("onclick", "deleteid()");
+        // deleteBtn.innerHTML = "DELETE";
+        // deleteTd.appendChild(deleteBtn);
+        // myTr .appendChild(deleteTd);
+
+        document.querySelector("tbody").appendChild(name)
+
+          
+  
+
+        });
+        
+    
+    
+        function deleteid() {
+        console.log("delete id called")
+    } 
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

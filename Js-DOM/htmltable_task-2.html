@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task-2</title>
+</head>
+<style>
+    table,th,td {
+            border: 2px solid black;border-radius: inherit;border-bottom-left-radius: inherit;
+            border-collapse: collapse;
+            width:max-content;
+            height: 50px; 
+        }
+</style>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>idvalues</th>
+                <th>delete</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+   <script>
+    var ids =
+        [
+        {
+            "id":"susu",
+            "idvalues":0
+            
+        },
+        {
+            "id":"susu",
+            "idvalues":0
+            
+        },
+        {
+            "id":"susu",
+            "idvalues":0
+            
+        },
+        {
+            "id":"susu",
+            "idvalues":0
+            
+        },
+        {
+            "id":"susu",
+            "idvalues":0
+            
+        },
+        {
+            "id":"susu",
+            "idvalues":0
+            
+        },
+        {
+            "id":"susu",
+            "idvalues":0
+            
+        },
+        {
+            "id":"susu",
+            "idvalues":0
+            
+        },
+        {
+            "id":"susu",
+            "idvalues":0
+            
+        },
+        {
+            "id":"susu",
+            "idvalues":0
+            
+        }
+    ]
+    // names.forEach((name)=>{
+    //         var mytr=document.createElement("tr")
+    //         var td1=document.createElement("td");
+    //         td1.innerHTML=name.fname
+    //         mytr.appendChild(td1)
+
+    //         var td2=document.createElement("td");
+    //         td2.innerHTML=name.lname
+    //         mytr.appendChild(td2)
+
+
+    //         document.querySelector("tbody").appendChild(mytr)
+        
+    //     })
+    ids.forEach((id)=>{
+        var mytr=document.createElement("tr")
+        var td1=document.createElement("td")
+        td1.innerHTML=id.id
+        mytr.appendChild(td1)
+
+        var td2=document.createElement("td")
+        td2.innerHTML=id.idvalues
+        mytr.appendChild(td2)
+
+        // var deleteTd = document.createElement("td");
+        // var deleteBtn = document.createElement("button");
+        // deleteBtn.setAttribute("onclick", "deleteid()");
+        // deleteBtn.innerHTML = "DELETE";
+        // deleteTd.appendChild(deleteBtn);
+        // myTr.appendChild(deleteTd);
+
+        document.querySelector("tbody").appendChild(mytr)
+    })
+    var deleteTd = document.createElement("td");
+        var deleteBtn = document.createElement("button");
+        deleteBtn.setAttribute("onclick", "deleteid()");
+        deleteBtn.innerHTML = "DELETE";
+        deleteTd.appendChild(deleteBtn);
+        myTr.appendChild(deleteTd);
+
+        // document.querySelector("tbody").appendChild(mytr)
+    function deleteid() {
+        console.log("delete id called")
+    }
+    
+   </script> 
+    
+</body>
+</html>

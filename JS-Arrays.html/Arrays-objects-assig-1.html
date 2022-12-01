@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var teamindia = [
+            {
+                name: "VIRATKOHLI",
+                runs: 82,
+                balls: 53,
+                fours: 6,
+                sixers: 4,
+                strikerate: 154.72
+            },
+            {
+                name: "KLRAHUL",
+                runs: 4,
+                balls: 8,
+                fours: 0,
+                sixers: 0,
+                strikerate: 50
+            },
+            {
+                name: "ROHITSHARMA",
+                runs: 4,
+                balls: 7,
+                fours: 0,
+                sixers: 0,
+                strikerate: 57.14
+            },
+
+            {
+                name: "SURYAKUMAR YADAV",
+                runs: 15,
+                balls: 10,
+                fours: 2,
+                sixers: 0,
+                strikerate: 150
+            },
+            {
+                name: "AXAR PATEL",
+                runs: 2,
+                balls: 3,
+                fours: 0,
+                sixers: 0,
+                strikerate: 66.67
+            },
+            {
+                name: "Hardikpandya",
+                runs: 40,
+                balls: 37,
+                fours: 1,
+                sixers: 2,
+                strikerate: 108.11
+            },
+            {
+                name: "Dineshkarthik",
+                runs: 1,
+                balls: 2,
+                fours: 0,
+                sixers: 0,
+                strikerate: 50
+            },
+            {
+                name: "Ravichandranashwin",
+                runs: 1,
+                balls: 1,
+                fours: 0,
+                sixers: 0,
+                strikerate: 100
+            },
+        ]
+        
+        // total score
+        var totalscore = teamindia.reduce((initialvalue, player) => {
+            if (initialvalue.runs) {
+                return initialvalue.runs + player.runs
+            } else {
+                return initialvalue + player.runs
+            }
+
+        })
+        console.log("totalscore : "+totalscore)
+        document.write("total score:"+totalscore+"<br>")
+
+
+        // total 4s
+        var totalfours = teamindia.reduce((initialvalue, player) => {
+            if (initialvalue.fours) {
+                return initialvalue.fours + player.fours
+            } else {
+                return initialvalue + player.fours
+            }
+
+        })
+        document.write("total 4s:"+totalfours+"<br>")
+        console.log("totalfours : "+totalfours)
+
+
+        // total sixers
+        var totalsixers = teamindia.reduce((initialvalue, player) => {
+            if (initialvalue.sixers) {
+                return initialvalue.sixers + player.sixers
+            } else {
+                return initialvalue + player.sixers
+            }
+        })
+        console.log("totalsixers : "+totalsixers)
+        document.write("total sixers:"+totalsixers+"<br>")
+        // lowest runs players
+        // var lruns=[4,4,82,15,2,40,1,1]
+        // var total=lruns.reduce((a,b)=>{
+        //     return a+b
+        // })
+        //   console.log(lruns)
+        // var lessthan8=teamindia.filter((player)=>{
+        //     return player.runs<8;
+        // })
+        // console.log(lessthan8)
+
+
+        // lowest runs players
+        var lowestruns = teamindia[0].runs;
+        teamindia.forEach((playerRuns, index, teamindia) => {
+            if (index >= 0) {
+                if (playerRuns.runs < lowestruns) {
+                    lowestruns = playerRuns.runs
+                }
+            }
+        })
+        console.log("lowestruns : "+lowestruns)
+        document.write("lowestruns:"+lowestruns+"<br>")
+
+
+        // highest runs
+        var highestruns = teamindia[0].runs;
+        teamindia.forEach((playerRuns, index, teamindia) => {
+            if (index >= 0) {
+                if (playerRuns.runs > highestruns) {
+                    highestruns = playerRuns.runs
+                }
+            }
+        })
+        console.log("highestruns : "+highestruns)
+        document.write("highestruns:"+highestruns+"<br>")
+
+
+        // loweststrikerate
+        var loweststrikerate = teamindia[0].strikerate;
+        teamindia.forEach((playerstrikerate, index, teamindia) => {
+            if (index >= 0) {
+                if (playerstrikerate.strikerate < loweststrikerate) {
+                    loweststrikerate = playerstrikerate.strikerate
+                }
+            }
+        })
+        console.log("loweststrikerate : "+loweststrikerate)
+        document.write("loweststrikerate:"+loweststrikerate+"<br>")
+
+        
+        // highest strike rate
+        var higheststrikerate = teamindia[0].strikerate;
+        teamindia.forEach((playerstrikerate, index, teamindia) => {
+            if (index >= 0) {
+                if (playerstrikerate.strikerate > higheststrikerate) {
+                    higheststrikerate = playerstrikerate.strikerate
+                }
+            }
+        })
+        console.log("higheststrikerate : "+higheststrikerate)
+        document.write("higheststrikerate:"+higheststrikerate+"<br>")
+
+    </script>
+</body>
+
+</html>

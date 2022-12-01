@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task1</title>
+</head>
+<style>
+    table,th,td {
+            border: 2px solid black;border-radius: inherit;border-bottom-left-radius: inherit;
+            border-collapse: collapse;
+            width:max-content;
+            height: 50px; 
+        }
+</style>
+<body>
+    <table >
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>User ID</th>
+            <th>Date</th>
+            <th>Products</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+            
+         
+    
+    <script>
+        var users=[
+        {"id":1,"userId":1,"date":"2020-03-02T00:00:02.000Z","products":[{"productId":1,"quantity":4}]},
+        {"id":2,"userId":1,"date":"2020-01-02T00:00:02.000Z","products":[{"productId":2,"quantity":4}]},
+        {"id":3,"userId":2,"date":"2020-03-01T00:00:02.000Z","products":[{"productId":1,"quantity":2}]},
+        {"id":4,"userId":3,"date":"2020-01-01T00:00:02.000Z","products":[{"productId":1,"quantity":4}]},
+        {"id":5,"userId":3,"date":"2020-03-01T00:00:02.000Z","products":[{"productId":7,"quantity":1}]},
+        {"id":6,"userId":4,"date":"2020-03-01T00:00:02.000Z","products":[{"productId":10,"quantity":2}]},
+        {"id":7,"userId":8,"date":"2020-03-01T00:00:02.000Z","products":[{"productId":18,"quantity":1}]}
+        ]
+        console.log(users);
+        users.forEach((user) => {
+        console.log(user);
+        var myTr = document.createElement("tr");
+        for (a in user) {
+          var myTd = document.createElement("td");
+          if (a !== "products" &&   a !== "date") {
+            myTd.innerHTML = user[a];
+            myTr.appendChild(myTd);
+          } else if (a == "products") {
+            var productTable = document.createElement("table");
+            user[a].forEach((item) => {
+              console.log(item);
+              var myProdTr = document.createElement("tr");
+              for (c in item) {
+                var ctd = document.createElement("td");
+                ctd.innerHTML = c + ": "+item[c];
+                myProdTr.appendChild(ctd);
+              }
+              productTable.appendChild(myProdTr);
+            });
+            myTd.appendChild(productTable);
+            myTr.appendChild(myTd);
+          }else if(a == 'date'){
+            myTd.innerHTML = new Date(user[a]).toDateString();
+            myTr.appendChild(myTd);
+          }
+        }
+        document.querySelector("tbody").appendChild(myTr);
+      });
+        // users.forEach((user)=>{
+        //     var mytr=document.createElement("tr")
+        //     var td1=document.createElement("td");
+        //     td1.innerHTML=user.id
+        //     mytr.appendChild(td1)
+
+        //     var td2=document.createElement("td");
+        //     td2.innerHTML=user.userId
+        //     mytr.appendChild(td2)
+
+        //     var td3=document.createElement("td");
+        //     td3.innerHTML=user.date
+        //     mytr.appendChild(td3)
+
+
+
+
+        //     var td4=document.createElement("td");
+        //     td4.innerHTML=user.products.productId
+        //     mytr.appendChild(td4)
+
+        //     var td5=document.createElement("td");
+        //     td5.innerHTML=user.products.quantity
+        //     mytr.appendChild(td5)
+
+
+        //     mytr.appendChild(td4)
+
+        //     var td5=document.createElement("td");
+        //     td5.innerHTML=user.productId
+        //     // mytr.appendChild(td5)
+
+           
+
+
+
+        //     document.querySelector("tbody").appendChild(mytr) 
+           
+           
+        // })
+        // // users.forEach((user) => {
+        // //     var mytr = document.createElement("tr")
+
+        // // //   object.values(user).forEach((val)=>{
+        // // //     console.log(val)
+        // // //     var mytd = document.createElement("td")
+        // // //     mytd.innerHTML=val;
+        // // //     mytr.appendChild(mytd)
+        // // //   })  
+        // // for(a in user){
+        // //     var mytd = document.createElement("td")
+        // //     mytd.innerHTML=user[a]
+        // //     mytr.appendChild(mytd)
+        // // }
+
+        // //     document.querySelector("tbody").appendChild(mytr)
+        // // })
+
+
+        
+
+
+
+    </script>
+    
+</body>
+</html>

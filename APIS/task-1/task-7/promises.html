@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="getData()">Get Data</button>
+    
+    <script>
+        var users = [];
+        function getData() {
+            return new Promise((resolve, reject) => {
+                var getInfo = new XMLHttpRequest();
+                getInfo.onreadystatechange = function () {
+                    if (getInfo.readyState == 4 && getInfo.status == 200) {
+                        data = JSON.parse(getInfo.response)
+                       
+                        displayData()
+
+                    }
+                };
+        getInfo.open("GET","https://filltext.com/?rows=10&id=%7Bindex%7D&email=%7Bemail%7D&username=%7Busername%7D&password=%7BrandomString%7C5%7D&pretty=true");
+        getInfo.send();
+            });
+        }
+
+        // getData()
+        //     .then((users) => {
+        //         console.log("iam success promise", users);
+        //    })
+           function displayData(){
+            data.forEach((ele)=>{
+            document.write(ele.email+" " +ele.password+" "+ "<br>")
+           })
+        }
+
+          
+           
+
+    </script>
+</body>
+
+</html>

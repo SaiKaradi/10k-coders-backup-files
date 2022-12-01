@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <body>
+        <ul></ul>
+        <button type="button" onclick="getData()">GetData</button>
+        
+        <script>
+             var data1=[];
+          var params={brand:'name'}
+              function formatcar(car) {
+                return (
+                    "?" +
+                    Object.keys(car)
+                        .map(function (key) {
+                            return key + "=" + encodeURIComponent(car[key]);
+                        })
+                        .join("&")
+                );
+            }
+            console.log(formatParams(car));
+    
+    
+            function getData() {
+               
+                var getInfo = new XMLHttpRequest()
+                getInfo.onreadystatechange = function () {
+                    if (getInfo.readyState == 4 && getInfo.status == 200) {
+                        console.log(JSON.parse(getInfo.response))
+                         data1=JSON.parse(getInfo.response)
+                         DisplaycarsLists()
+                    }
+                }
+                var cars = 'https://car-api2.p.rapidapi.com/api/models'+formatcar(cars);
+                getInfo.open("GET", cars)
+                getInfo.setRequestHeader("X-RapidAPI-Key", "3452970f5dmsh595857851761f3cp1d7170jsn897f12cd5d63");
+                getInfo.setRequestHeader("X-RapidAPI-Host", "car-api2.p.rapidapi.com");
+                getInfo.send();
+            }
+            function  DisplaycarsLists(){
+               for( a in data1){
+                if(a!=="data"){
+                    var myli=document.createElement("li")
+                myli.innerHTML=data1[a]
+                document.querySelector("ul").appendChild(myli)
+                }else if(a == "data")
+                {
+                    data1[a].forEach((car)=>{
+                     for(b in car){
+                        var myli=document.createElement("li")
+                        myli.innerHTML=b+":"+car[b]
+                        document.querySelector("ul").appendChild(myli)
+
+                     }
+                        
+                    })
+                }
+                
+
+               }
+         
+         
+    
+    
+            }
+          
+    
+          
+        </script>
+    
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    var products = []
+    // function getInfo(){
+    //   var product = new XMLHttpRequest()
+    //   product.onreadystatechange = function(){
+    //     if ( product.readyState ==4 && product.status == 200){
+    //       products = JSON.parse(product.response)
+    //       console.log(" the products are :    ",products)
+
+    //     }
+    //   }
+    //   product.open("GET","https://ali-express1.p.rapidapi.com/categories")
+    //   product.setRequestHeader("X-RapidAPI-Key","f55afadb54msh9a226ca8c13ce9ap177567jsnbedee190261f")
+    //   product.setRequestHeader("X-RapidAPI-Host","ali-express1.p.rapidapi.com")
+    //   product.send()
+    // }
+    // // console.log(products)
+    // getInfo()
+
+
+      function getInfo(){
+         return new Promise((resolve,reject)=>{
+          var product1 = new XMLHttpRequest()
+          product1.onreadystatechange = function(){
+            if (product1.readyState == 4 && product1.status == 200){
+              products = JSON.parse(product1.response)
+              resolve(products)
+            }
+          }
+          product1.open("GET","https://ali-express1.p.rapidapi.com/categories")
+      product1.setRequestHeader("X-RapidAPI-Key","f55afadb54msh9a226ca8c13ce9ap177567jsnbedee190261f")
+      product1.setRequestHeader("X-RapidAPI-Host","ali-express1.p.rapidapi.com")
+      product1.send()
+
+         })
+      }
+      // getInfo()
+      // .then((products)=>{
+      //   console.log("i am from resolve ....!!!!!",products)
+      // })
+      // .catch((products)=>{
+      //   console.log("i am from reject ....!!!!!",products)
+      // })
+
+
+      async function asyncData(){
+        try{
+          var product2 = await getInfo()
+          console.log(
+            "  using asyn function ....!!!!! and await .......!!!!!!"
+          );
+          console.log(" i am from async data with TRY :    ", products);
+        }
+        catch{
+          console.log(
+            "  using asyn function ....!!!!! and await .......!!!!!!"
+          );
+          console.log(" i am from async data with CATCH :    ", products);
+        }
+      }
+      asyncData()
+
+
+  </script>
+</body>
+</html>

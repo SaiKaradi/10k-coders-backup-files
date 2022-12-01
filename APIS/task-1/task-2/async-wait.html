@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul></ul>
+    <script>
+         var options = {
+            
+ 
+      cell: "(016)-453-8891",
+     
+      email: "yoshi.vuik@example.com",
+      gender: "male",
+      
+     
+        country: "Netherlands",
+        postcode: 82870,
+        state: "Utrecht",
+       
+      }
+     
+  function formatoptions(options) {
+            return (
+                "?" +
+                Object.keys(options)
+                    .map(function (key) {
+                        return key + "=" + encodeURIComponent(options[key]);
+                    })
+                    .join("&")
+            );
+        }
+        console.log(formatoptions(options));
+
+        
+        var data=[];
+      
+        function randomData(){
+            return new Promise((resolve,reject)=>{
+                var getData= new XMLHttpRequest();
+                getData.onreadystatechange =function(){
+                    if(getData.readyState==4 && getData.status==200){
+                         data=JSON.parse(getData.response)
+                        resolve(data)
+                        
+                    }
+                }
+                var apiurl="https://random-user.p.rapidapi.com/getuser"+formatoptions(options);
+                getData.open("GET", apiurl)
+            getData.setRequestHeader('X-RapidAPI-Key','175cc682cfmsh6dde75357eded3dp1155a0jsn277253f45298');
+            getData.setRequestHeader('X-RapidAPI-Host', 'random-user.p.rapidapi.com');
+            getData.send();
+            
+
+            })
+        }
+        async function handlegetdata(){
+          try {
+            data= await randomData();
+            for( a in data){
+            var myli=document.createElement("li")
+                    myli.innerHTML=JSON.stringify(data[a])
+                    document.querySelector("ul").appendChild(myli)
+         } 
+            
+          } catch (error) {
+            console.log("there is some issue with the sources please contact after safter some time")
+            
+          }finally{
+            console.log("you have exectedSucessFully")
+          }
+
+         
+            
+        }
+        handlegetdata();
+        
+
+        </script>
+    
+      
+
+    </script>
+
+    
+</body>
+</html>

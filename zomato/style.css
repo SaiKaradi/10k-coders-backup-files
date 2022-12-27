@@ -1,0 +1,217 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+body{
+    height: 100vh;
+    width: 100vw;
+}
+.hero{
+    background-image: url('https://b.zmtcdn.com/web_assets/81f3ff974d82520780078ba1cfbd453a1583259680.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px black solid;
+    width: 100%;
+    height: 500px;
+    padding-top: 30px;
+}
+.navbar{
+    padding-left: 50px;
+    padding-right: 50px;
+    height: 80px;
+    width: 100%;
+    color: white;
+}
+.navbar h3{
+    font-weight: 400px;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar_left,.navbar_right{
+    height: 100%;
+   
+}
+.navbar_left{
+   
+    width: 150px;
+    
+}
+.navbar_right{
+    width: 900px;
+   
+}
+p.one{
+    word-spacing: 40px;
+}
+
+.container{
+    height: 200px;
+    width: 100%;
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.container p{
+    font-size: 40px;
+}
+.search_main{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 5px;
+    margin-left: 200px;
+    border-radius: 7px;
+    width: 800px;
+    height: 50px;
+    background-color: white;
+}
+.logo{
+    color: rgb(255,134 ,134);
+    font-size: 20px;
+    
+}
+.line{
+    color: black;
+    font-weight: 40;
+    font-size: 30px;
+}
+.bar{
+    color:rgb(122,122 ,122);
+    font-size: 20px;
+    margin-left: 10px;
+   
+}
+.search_main select{
+    height: 90%;
+    width:300px ;
+    font-size:100% ;
+    outline:none ;
+    border: none;
+
+}
+.search_main input{
+    height: 100%;
+    width: 400px ;
+    font-size:100% ;
+    outline:none ;
+    border: none;
+
+}
+.card{
+    height:200px ;
+    width:500px ;
+    border: 1px solid rgb(123, 118, 118);
+    border-radius:8px ;
+    margin-left: 70px;
+    margin-top: 40px;
+    overflow: hidden;
+}
+.card2{
+    height:200px ;
+    width:500px ;
+    border: 1px solid rgb(122, 117, 117);
+    border-radius:8px ;
+    margin-right: 120px;
+    margin-top: 40px;
+
+}
+.card2  .img{
+    width:100% ;
+    height: 60%;
+    background-image: url("https://www.tripsavvy.com/thmb/zbel3cFrqDUj0HYtaGbv17B0fSk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/table-full-of-indian-food--1251033362-a924bf11f03344a1bb05dde19fba88b3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.card  .img{
+    width:100% ;
+    height: 60%;
+    background-image: url("https://img.freepik.com/free-photo/delicious-indian-food-tray_23-2148723505.jpg?w=2000");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.card:hover{
+    transform: scale(1.2);
+}
+.card2:hover{
+    transform: scale(1.2);
+}
+.tittle{
+    margin-left: 20px;
+    margin-top: 15px;
+   
+}
+.subtittle{
+    margin-left: 20px;
+    margin-top: 7px;
+}
+.tittle2{
+    margin-left: 20px;
+    margin-top: 15px;
+   
+
+}
+.subtittle2{
+    margin-left: 20px;
+    margin-top: 7px;
+
+}
+.hero2{
+    border: 1px #faf8f8 solid;
+    width: 100%;
+    height: 500px;
+    padding-top: 30px;
+}
+.tittle3{
+    margin-left: 70px;
+    margin-top: 40px;
+}
+.tittle3 p {
+    font-size: 35px;
+    font-weight: 100%;
+ 
+   
+
+}
+.card1{
+    width: 350px;
+    height: 100px;
+    border: 1px solid black;
+    margin-top: 30px;
+    margin-left: 70px;
+  
+}
+
+.para{
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 20px;
+}
+.para1{
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 20px;
+
+}
+.icon {
+  margin-left: 300px;
+  margin-bottom: 30px;
+
+  
+}
+
+.hero3{
+    border: 1px #faf8f8 solid;
+    width: 100%;
+    height: 500px;
+    padding-top: 30px;
+}

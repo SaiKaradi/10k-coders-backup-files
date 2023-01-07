@@ -1,0 +1,11 @@
+.main{
+    height: 100vh;
+}
+.login{
+    width: 200px;
+    padding: 10px;
+    height:min-content;
+    border-radius: 10px;
+    color:black;
+    background-color: darkgray;
+}
